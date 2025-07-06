@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div id="welcome-page">
+        <h1>Welcome to Jumping Adventure!</h1>
+        <p>Leap over obstacles, collect points, and set a new highscore!<br>Choose your favorite character and see how far you can go!</p>
+        <div id="character-previews">
+            <!-- Character previews will be rendered here -->
+        </div>
+        <button id="welcome-start-btn">Start</button>
+    </div>
+    <div id="game-ui" style="display:none;">
+        <h1>Jumping Game</h1>
+        <div id="character-select">
+            <label for="characters">Choose your character:</label>
+            <select id="characters"></select>
+        </div>
+        <div id="scoreboard">
+            <span id="score">Score: 0</span>
+            <span id="highscore">Highscore: 0</span>
+        </div>
+        <button id="start-btn">Start Game</button>
+    </div>
+    <canvas id="game-canvas" width="800" height="400" style="display:none;"></canvas>
+    <script src="game.js"></script>
+</body>
+</html> 

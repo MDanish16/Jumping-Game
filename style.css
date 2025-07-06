@@ -1,0 +1,146 @@
+body {
+    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: bg-move 12s linear infinite alternate;
+}
+@keyframes bg-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+#game-ui {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.9);
+    padding: 20px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    text-align: center;
+}
+#character-select {
+    margin: 16px 0;
+}
+#scoreboard {
+    margin: 12px 0;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+#start-btn {
+    background: #66a6ff;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#start-btn:hover {
+    background: #89f7fe;
+    color: #333;
+}
+#game-canvas {
+    display: block;
+    margin: 30px auto 0 auto;
+    background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+    border: 2px solid #66a6ff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#welcome-page {
+    margin-top: 60px;
+    background: rgba(255,255,255,0.95);
+    padding: 36px 48px 32px 48px;
+    border-radius: 20px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    text-align: center;
+    max-width: 480px;
+    width: 90vw;
+    position: relative;
+    z-index: 2;
+}
+#welcome-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+#welcome-page p {
+    font-size: 1.2em;
+    margin-bottom: 24px;
+    color: #444;
+}
+#welcome-start-btn {
+    background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px rgba(102,166,255,0.15);
+    transition: background 0.2s, color 0.2s;
+}
+#welcome-start-btn:hover {
+    background: #fff;
+    color: #66a6ff;
+    border: 2px solid #66a6ff;
+}
+#character-previews {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+.character-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.character-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #66a6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background: #f7faff;
+    box-shadow: 0 1px 6px rgba(102,166,255,0.08);
+}
+.character-name {
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+}
+.cloud {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px 60px 40px 40px;
+    opacity: 0.7;
+    box-shadow: 40px 0 60px 0 #fff, 80px 10px 80px 0 #fff;
+    animation: cloud-move 30s linear infinite;
+}
+.cloud:nth-child(1) { left: 10%; top: 40px; animation-duration: 32s; }
+.cloud:nth-child(2) { left: 60%; top: 80px; animation-duration: 28s; }
+.cloud:nth-child(3) { left: 30%; top: 120px; animation-duration: 36s; }
+@keyframes cloud-move {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(1000px); }
+} 
